@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value = "weather"/>
+    <version value = "1"/>
+
+    <list>
+        <mapping class = "com.example.wangh7.weather.DataBase.City"/>
+        <mapping class = "com.example.wangh7.weather.DataBase.County"/>
+        <mapping class = "com.example.wangh7.weather.DataBase.Province"/>
+
+    </list>
+</litepal>
