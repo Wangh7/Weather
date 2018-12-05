@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.wangh7.weather.Gson.Forecast;
 import com.example.wangh7.weather.Gson.Weather;
+import com.example.wangh7.weather.Service.AutoUpdateService;
 import com.example.wangh7.weather.Util.HttpUtil;
 import com.example.wangh7.weather.Util.Utility;
 
