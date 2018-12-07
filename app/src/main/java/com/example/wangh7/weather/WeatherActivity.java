@@ -118,12 +118,13 @@ public class WeatherActivity extends AppCompatActivity {
                 drawerLayout.openDrawer(GravityCompat.START);
             }
         });
-        String bingPic = prefs.getString("bing_pic", null);
-        if (bingPic != null) {
-            Glide.with(this).load(bingPic).into(bingPicImg);
-        } else {
-            loadBingPic();
-        }
+        //String bingPic = prefs.getString("bing_pic", null);
+        //if (bingPic != null) {
+        //    Glide.with(this).load(bingPic).into(bingPicImg);
+        //} else {
+        //loadBingPic();
+        backPic();
+        //}
     }
 
     /**
@@ -165,7 +166,8 @@ public class WeatherActivity extends AppCompatActivity {
                 });
             }
         });
-        loadBingPic();
+        //loadBingPic();
+        backPic();
     }
 
     /**
@@ -195,6 +197,16 @@ public class WeatherActivity extends AppCompatActivity {
         });
     }
 
+
+    public void backPic() {
+        if(weatherInfoText.getText().equals("晴")) {
+            Glide.with(WeatherActivity.this).load(R.drawable.sunny).into(bingPicImg);
+        }
+        if(weatherInfoText.getText().equals("阴")) {
+            Glide.with(WeatherActivity.this).load(R.drawable.cloud).into(bingPicImg);
+        }
+
+    }
     /**
      * 处理并展示Weather实体类中的数据。
      */
